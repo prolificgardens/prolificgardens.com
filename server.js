@@ -7,12 +7,12 @@ server.connection({
 
 server.route({
   method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply.file(process.cwd() + '/dist/index.html');
+  path: '/{param*}',
+  handler: {
+    directory: {
+      path: 'dist'
+    }
   }
 });
 
-server.start(function() {
-  console.log('Kindling running on port ' + server.info.port)
-});
+server.start();
