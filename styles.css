@@ -1,0 +1,13 @@
+/*body { padding-top: 70px; }*/
+
+.masthead {
+    min-height: 400px;
+}
+
+.card{
+    box-shadow: 2px 2px 5px #888888
+}
+.how-section{
+    /*border-left: 3px solid;*/
+    box-shadow: 1px 1px 5px #999
+}
