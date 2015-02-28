@@ -9,9 +9,9 @@
     <script src="app.js"></script>
     <title>Prolific Gardens</title>
   </head>
-  <body class="container">
+  <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -37,13 +37,19 @@
     </nav>
 
     <div class="tab-content">
+
       <div role="tabpanel" class="tab-pane fade" id="home">
 
-        <div class="jumbotron masthead">
-          <div class="container">
-            <div class="col-sm-6"></div>
-            <div class="col-sm-6">
-              <h1>Northern Virginia's Garden-to-Table Solution</h1></div>
+        <div class="container-full-bg" style="background-image:url('//placehold.it/1024x700/2CDCAB/fff&text=+');">
+          <div class="container special">
+            <div class="jumbotron">
+              <div class="container">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                  <h1>Northern Virginia's Garden-to-Table Solution</h1>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -51,44 +57,56 @@
 
       <div role="tabpanel" class="tab-pane fade" id="about">
 
-
-          <div class="jumbotron masthead">
-            <div class="container">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6">
-                <h1>Northern Virginia's Garden-to-Table Solution</h1></div>
+        <div class="container-full-bg" style="background-image:url('//placehold.it/1024x700/2CDCAB/fff&text=+');">
+          <div class="container special">
+            <div class="jumbotron">
+              <div class="container">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                  <h1>
+                    Healthy.
+                    <br/>
+                    Sustainable.
+                    <br/>
+                    Local.
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
+        <div class="container">
           <h2>A quick tagline here.</h2>
 
-          <p>Prolific Gardens is dedicated to bringing its customers an affordable, sustainable, and organic approach to
+          <p>
+            Prolific Gardens is dedicated to bringing its customers an affordable, sustainable, and organic approach to
             growing produce. We provide sustainable agriculture solutions by creating and maintaining home gardens
             tailored to fit your needs. Our mission is to make fresh, organic produce available by providing a service
             that will design and install raised garden beds as well as maintain your garden from the plants down to the
-            soil.</p>
+            soil.
+          </p>
 
-          <p>An important part of our business model is that we do not use any pesticides. Instead, crop rotation,
+          <p>
+            An important part of our business model is that we do not use any pesticides. Instead, crop rotation,
             intelligent planting practices and healthy soil is our approach to pest mitigation. Northern Virginia's
             climate is ideal for cultivating many vegetables, fruits, and herbs. Although our winters can bring a
             drastic drop in temperatures, innovative methods allow us to keep our customers harvesting through the
             seasons. Our goal is to deliver a year round garden to table option that is both local and healthy. We
-            looking forward to growing with you.</p>
-
-
+            looking forward to growing with you.
+          </p>
+        </div>
 
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="services">
 
-        <div class="container">
-          <h2>
-            Options to fit any budget
-            <small class="pull-right">Materials, Labor, & Love are included</small>
-          </h2>
-          <hr/>
+        <div class="container pg-services">
+
+          <!-- pricing-->
           <div class="row">
 
+            <!-- starter -->
             <div class="col-sm-4">
               <div class="panel panel-default">
                 <!-- Default panel contents -->
@@ -98,8 +116,6 @@
                 <div class="panel-body">
                   <img data-src="holder.js/330x200/vine" class="img-responsive">
                 </div>
-
-
                 <ul class="list-group">
                   <li class="list-group-item">
                     2 (4’x8’ Cedar Raised Garden Beds)
@@ -117,9 +133,15 @@
                     Total cost: <strong>$1,260</strong>
                   </li>
                 </ul>
+                <div class="panel-footer">
+                  <center>
+                    <button type="button" class="btn btn-primary">Get Started</button>
+                  </center>
+                </div>
               </div>
             </div>
 
+            <!-- premium -->
             <div class="col-sm-4">
               <div class="panel panel-default  card">
                 <!-- Default panel contents -->
@@ -148,10 +170,15 @@
                     Total cost: <strong>$3,000</strong>
                   </li>
                 </ul>
+                <div class="panel-footer">
+                  <center>
+                    <button type="button" class="btn btn-primary">Get Started</button>
+                  </center>
+                </div>
               </div>
-
             </div>
 
+            <!-- enthusiast -->
             <div class="col-sm-4">
               <div class="panel panel-default">
                 <!-- Default panel contents -->
@@ -161,7 +188,6 @@
                 <div class="panel-body">
                   <img data-src="holder.js/330x200/vine" class="img-responsive">
                 </div>
-
 
                 <ul class="list-group">
                   <li class="list-group-item">
@@ -180,15 +206,29 @@
                     Total cost: <strong>$6,840</strong>
                   </li>
                 </ul>
+                <div class="panel-footer">
+                  <center>
+                    <button type="button" class="btn btn-primary">Get Started</button>
+                  </center>
+                </div>
               </div>
 
             </div>
 
           </div>
 
+          <!-- legalese -->
+          <div class="row">
+            <h3>
+              <small class="pull-right">Materials, Labor, & Love Included</small>
+              <br/>
+            </h3>
+          </div>
+
           <br/>
 
-          <div>
+          <!-- faq -->
+          <div class="row">
             <h2>How it works</h2>
             <hr/>
             <div class="container">
@@ -243,7 +283,8 @@
                     <br/>
                     <small>within 2 weeks after construction</small>
                   </h4>
-                  <p>A member of our team visits with you and your garden to make sure your new garden is thriving!</p>
+                  <p>A member of our team visits with you and your garden to make sure your new garden is
+                    thriving!</p>
                 </div>
                 <div class="col-sm-4">
                   <h4>You can expect...</h4>
@@ -288,6 +329,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
