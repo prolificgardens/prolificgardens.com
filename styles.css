@@ -1,12 +1,11 @@
 body { padding-top: 50px; }
 
-.pg-services {
+.pg-pricing {
     padding-top: 20px;
 }
 
 .masthead {
     min-height: 400px;
-    /*background-image: url("images/masthead.jpg");*/
 }
 
 .jumbotron {
@@ -36,6 +35,5 @@ body { padding-top: 50px; }
 }
 
 .how-section {
-    /*border-left: 3px solid;*/
     box-shadow: 1px 1px 5px #999
 }
