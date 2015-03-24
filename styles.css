@@ -37,3 +37,9 @@ body { padding-top: 50px; }
 .how-section {
     box-shadow: 1px 1px 5px #999
 }
+
+.logo-large {
+    /*width: 640px;*/
+    /*height: 400px;*/
+    padding-top: 10px;
+}
