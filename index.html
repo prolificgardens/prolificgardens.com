@@ -597,35 +597,36 @@
             </div>
             <div class="form-group">
               <label for="questions">Any questions or special considerations?</label>
-              <textarea class="form-control" rows="3" name="text" id="questions" placeholder="I'm interested in an investment that keeps growing!"></textarea>
+              <textarea class="form-control" rows="3" name="text" id="questions"
+                        placeholder="I'm interested in an investment that keeps growing!"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
 
-	 <script>
-$( "#contactMailgun" ).submit(function( event ) {
-  event.preventDefault();
-  var $form = $( this );
-  var  from = $form.find( "input[name='name']" ).val() + '<' + $form.find( "input[name='from']" ).val() + '>';
-  var  subject = 'Potential client from prolificgardens.com: ' + $form.find( "input[name='name']" ).val();
-  var  url = $form.attr( "action" );
-  var  text = $form.find("textarea[name='text']").val();
- 
-  // Send the data using post
-  var posting = $.post( url, { 
-	to: 'contact@prolificgardens.com',
-        from: from,
-        subject: subject,
-        text: text 
-  } );
-  
-  posting.done(function(){
-   $("#contactMailgun").empty().append('<div class="alert alert-success" role="alert">Thanks!  We\'ll be in touch soon!</div>'); 
-  });
+          <script>
+            $("#contactMailgun").submit(function (event) {
+              event.preventDefault();
+              var $form = $(this);
+              var from = $form.find("input[name='name']").val() + '<' + $form.find("input[name='from']").val() + '>';
+              var subject = 'Potential client from prolificgardens.com: ' + $form.find("input[name='name']").val();
+              var url = $form.attr("action");
+              var text = $form.find("textarea[name='text']").val();
 
-});
+              // Send the data using post
+              var posting = $.post(url, {
+                to: 'contact@prolificgardens.com',
+                from: from,
+                subject: subject,
+                text: text
+              });
 
-	 </script>
+              posting.done(function () {
+                $("#contactMailgun").empty().append('<div class="alert alert-success" role="alert">Thanks!  We\'ll be in touch soon!</div>');
+              });
+
+            });
+
+          </script>
 
         </div>
       </div>
