@@ -583,16 +583,21 @@
 
           <form>
             <div class="form-group">
+              <label for="email">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              <input type="hidden" name="to" id="to" value="justin.mandzik@gmail.com">
+            </div>
+            <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" name="from" id="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number">
             </div>
             <div class="form-group">
               <label for="questions">Any questions or special considerations?</label>
-              <textarea class="form-control" rows="3" id="questions"></textarea>
+              <textarea class="form-control" rows="3" name="comments" id="questions"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
