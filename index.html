@@ -578,29 +578,54 @@
           </h4>
 
           <h3>
-            Or let us know a good time to contact you
+            Or tell us about your needs
           </h3>
 
-          <form>
+
+          <form id="contactMailgun" action="/mailgun-send">
             <div class="form-group">
-              <label for="email">Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-              <input type="hidden" name="to" id="to" value="justin.mandzik@gmail.com">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required autofocus>
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" class="form-control" name="from" id="email" placeholder="Email">
+              <input type="email" class="form-control" name="from" id="email" placeholder="Email" required>
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
               <label for="questions">Any questions or special considerations?</label>
-              <textarea class="form-control" rows="3" name="comments" id="questions"></textarea>
+              <textarea class="form-control" rows="3" name="text" id="questions" placeholder="I'm interested in an investment that keeps growing!"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
+
+	 <script>
+$( "#contactMailgun" ).submit(function( event ) {
+  event.preventDefault();
+  var $form = $( this );
+  var  from = $form.find( "input[name='name']" ).val() + '<' + $form.find( "input[name='from']" ).val() + '>';
+  var  subject = 'Potential client from prolificgardens.com: ' + $form.find( "input[name='name']" ).val();
+  var  url = $form.attr( "action" );
+  var  text = $form.find("textarea[name='text']").val();
+ 
+  // Send the data using post
+  var posting = $.post( url, { 
+	to: 'contact@prolificgardens.com',
+        from: from,
+        subject: subject,
+        text: text 
+  } );
+  
+  posting.done(function(){
+   $("#contactMailgun").empty().append('<div class="alert alert-success" role="alert">Thanks!  We\'ll be in touch soon!</div>'); 
+  });
+
+});
+
+	 </script>
 
         </div>
       </div>
